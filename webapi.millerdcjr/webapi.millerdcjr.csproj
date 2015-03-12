@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -209,7 +210,52 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Address.cs">
+      <DependentUpon>webapiMillerdcjrModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Client.cs">
+      <DependentUpon>webapiMillerdcjrModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contact.cs">
+      <DependentUpon>webapiMillerdcjrModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Country.cs">
+      <DependentUpon>webapiMillerdcjrModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CountryZone.cs">
+      <DependentUpon>webapiMillerdcjrModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gig.cs">
+      <DependentUpon>webapiMillerdcjrModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Job.cs">
+      <DependentUpon>webapiMillerdcjrModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Link.cs">
+      <DependentUpon>webapiMillerdcjrModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Log.cs">
+      <DependentUpon>webapiMillerdcjrModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserProfile.cs">
+      <DependentUpon>webapiMillerdcjrModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\webapiMillerdcjrModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>webapiMillerdcjrModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\webapiMillerdcjrModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>webapiMillerdcjrModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\webapiMillerdcjrModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>webapiMillerdcjrModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -243,6 +289,23 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <EntityDeploy Include="Models\webapiMillerdcjrModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>webapiMillerdcjrModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\webapiMillerdcjrModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>webapiMillerdcjrModel.edmx</DependentUpon>
+      <LastGenOutput>webapiMillerdcjrModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\webapiMillerdcjrModel.edmx.diagram">
+      <DependentUpon>webapiMillerdcjrModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\webapiMillerdcjrModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>webapiMillerdcjrModel.edmx</DependentUpon>
+      <LastGenOutput>webapiMillerdcjrModel.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -285,6 +348,9 @@
     <EmbeddedResource Include="Migrations\201503121757191_initial.resx">
       <DependentUpon>201503121757191_initial.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
